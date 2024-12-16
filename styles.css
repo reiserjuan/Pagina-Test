@@ -1,0 +1,227 @@
+html, body {
+    height: 100%; /* Asegura que el html y el body ocupen toda la altura de la ventana */
+    margin: 0; /* Elimina el margen por defecto */
+    background-image: url('FondoD.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Cubre todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: repeat; /* No repite la imagen */
+    color: white; /* Color del texto */
+    font-family: Arial, sans-serif; /* Fuente por defecto */
+}
+
+.content {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Altura completa de la ventana */
+    text-align: center; /* Centra el texto */
+}
+
+.bg-primary {
+    background-color: #000000 !important; /* Color de fondo primario */
+}
+
+.image-container {
+    text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+.image-container img {
+    display: block; /* Hace que la imagen sea un elemento de bloque */
+    margin-left: auto; /* Margen automático a la izquierda */
+    margin-right: auto; /* Margen automático a la derecha */
+    width: 80%; /* Ajusta el ancho de la imagen según sea necesario */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+}
+
+.card {
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido de la tarjeta se apile verticalmente */
+    height: 100%; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+    justify-content: space-between; /* Espacia el contenido para que el botón esté en la parte inferior */
+    height: 100%;
+}
+
+.card-body .card-text {
+    margin-bottom: 16px; /* Margen inferior para el texto */
+}
+
+.card-body .btn {
+    margin-top: 16px; /* Margen superior para el botón */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+}
+
+.text-black {
+    color: black;
+}
+
+#wrapper-iframe {
+    max-width: 100%; /* Asegúrate de que no exceda el contenedor padre */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+.header {
+    /* Puedes agregar estilos para el encabezado aquí */
+}
+
+.header-frame {
+    position: relative;
+    border: 5px solid #ffffff; /* Color dorado para el marco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+    padding: 20px; /* Espaciado interno adicional */
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
+}
+
+.header-frame h1 {
+    font-family: 'Fantasy', sans-serif; /* Fuente de estilo de fantasía */
+    font-size: 3em; /* Tamaño de fuente grande para el título */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra de texto para el título */
+}
+
+.header-frame .nav-link {
+    font-family: 'Fantasy', sans-serif; /* Fuente de estilo de fantasía para los enlaces */
+    font-size: 1.2em; /* Tamaño de fuente para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    color: #ffffff; /* Color dorado para los enlaces */
+    background-color: #000000;
+    border: none;
+}
+
+.header-frame .nav-link:hover {
+    color: #fff; /* Cambia el color al pasar el mouse */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Sombra de texto al pasar el mouse */
+    background-color: #28a745;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.modal-content {
+    background-color: transparent;
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 960px; /* Max width */
+}
+
+.modal-header {
+    display: flex; /* Usar flexbox para el encabezado del modal */
+    justify-content: space-between; /* Espacia el contenido */
+    align-items: center; /* Centra verticalmente */
+}
+
+.modal-title {
+    font-size: 1.5em; /* Tamaño de fuente para el título del modal */
+}
+
+.modal-close {
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 1.2em; /* Tamaño de fuente para el botón de cerrar */
+}
+
+.modal-body {
+    margin-top: 10px; /* Margen superior para el cuerpo del modal */
+}
+
+.modal-footer {
+    display: flex; /* Usar flexbox para el pie del modal */
+    justify-content: flex-end; /* Alinear a la derecha */
+    margin-top: 20px; /* Margen superior para el pie del modal */
+}
+
+.btn-close {
+    background-color: #dc3545; /* Color de fondo para el botón de cerrar */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+.btn-close:hover {
+    background-color: #c82333; /* Color al pasar el mouse */
+}
+
+/* Estilos para alertas */
+.alert {
+    padding: 15px; /* Espaciado interno */
+    margin-bottom: 20px; /* Margen inferior */
+    border: 1px solid transparent; /* Borde transparente */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.alert-success {
+    color: #155724; /* Color del texto para éxito */
+    background-color: #d4edda; /* Fondo verde claro */
+    border-color: #c3e6cb; /* Borde verde */
+}
+
+.alert-danger {
+    color: #721c24; /* Color del texto para error */
+    background-color: #f8d7da; /* Fondo rojo claro */
+    border-color: #f5c6cb; /* Borde rojo */
+}
+
+.alert-warning {
+    color: #856404; /* Color del texto para advertencia */
+    background-color: #fff3cd; /* Fondo amarillo claro */
+    border-color: #ffeeba; /* Borde amarillo */
+}
+
+.alert-info {
+    color: #0c5460; /* Color del texto para información */
+    background-color: #d1ecf1; /* Fondo azul claro */
+    border-color: #bee5eb; /* Borde azul */
+}
+
+/* Otros estilos generales */
+.text-center {
+    text-align: center; /* Centra el texto */
+}
+
+.text-danger {
+    color: red; /* Color rojo */
+}
+
+.text-success {
+    color: green; /* Color verde */
+}
+
+.text-warning {
+    color: orange; /* Color naranja */
+}
+
+.text-info {
+    color: blue; /* Color azul */
+}
