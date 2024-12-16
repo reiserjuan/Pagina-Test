@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Mi Homepage</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="index.html">
+    <link href="script.js">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="bg-primary text-white text-center p-4 header-frame">
+        <div class="container" style="background-color: transparent; display: flex; align-items: center; justify-content: center;">
+            <img alt="logo" class="logo" width="100" height="100" src="enrage.jpg" style="color: transparent; margin-right: 10px;">
+            <h1 style="margin: 0;">Enrage</h1> <!-- Se elimina el margen por defecto del h1 -->
+        </div>
+        <nav>
+            <ul class="nav justify-content-center" style="list-style-type: none; padding: 0; margin: 0;">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" class="btn btn-custom mt-3">Inicio</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="miembros.html" class="btn btn-custom mt-3">Miembros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="juegos.html" class="btn btn-custom mt-3">Juegos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://discord.gg/5QgHgwq5" class="btn btn-custom mt-3">Discord</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section id="projects" class="mb-4" style="background-color: transparent; padding: 20px; border-radius: 8px; margin-top: 20px; overflow: auto; max-width: 960px; margin-left: auto; margin-right: auto;">
+        <h2 style="color: white;">Highlights</h2>
+        <div class="row">
+            <div class="col-md-4 d-flex justify-content-center mb-4">
+                <div class="card" style="background-color: transparent; border: none; width: 320px;">
+                    <iframe style="width: 100%; height: 200px; object-fit: cover;" src="https://www.youtube.com/embed/47oeB53AdKc?si=K3tUH-eTC-zRXyGk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="card-body" style="background-color: white;">
+                        <h5 class="card-title" style="color: black;">DONK</h5>
+                        <p class="card-text" style="color: black;">Video recopilatorio de las mejores jugadas de DONK en el 2024.</p>
+                        <button class="btn btn-primary" onclick="openModal('https://www.youtube.com/embed/47oeB53AdKc?si=K3tUH-eTC-zRXyGk')">Ver Video</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div id="videoModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <iframe id="modalVideo" width="960" height="480" src=""frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-center mb-4">
+                <div class="card" style="background-color: transparent; border: none; width: 320px;">
+                    <iframe style="width: 100%; height: 200px; object-fit: cover;" src="https://www.youtube.com/embed/bBMgrHHJEOA?si=4i_Mfhm5VmI19Ain" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div class="card-body" style="background-color: white;">
+                        <h5 class="card-title" style="color: black;">Simple</h5>
+                        <p class="card-text" style="color: black;">Video recopilatorio de las mejores jugadas de Simple en el 2024.</p>
+                        <button class="btn btn-primary" onclick="openModal('https://www.youtube.com/embed/bBMgrHHJEOA?si=4i_Mfhm5VmI19Ain')">Ver Video</button>
+                    </div>
+                </div>
+            </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Puedes agregar más tarjetas aquí -->
+        </div>
+    </section>
+    <script>
+        function openModal(videoUrl) {
+            document.getElementById('modalVideo').src = videoUrl;
+            document.getElementById('videoModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('modalVideo').src = ''; // Stop the video when closing
+            document.getElementById('videoModal').style.display = 'none';
+        }
+    </script>
